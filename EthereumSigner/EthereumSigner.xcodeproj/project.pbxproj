@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		5B1D342A2255101B0048473D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D34292255101B0048473D /* AppDelegate.swift */; };
-		5B1D342C2255101B0048473D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D342B2255101B0048473D /* ViewController.swift */; };
+		5B1D342C2255101B0048473D /* SetupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D342B2255101B0048473D /* SetupVC.swift */; };
 		5B1D342F2255101B0048473D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B1D342D2255101B0048473D /* Main.storyboard */; };
 		5B1D34312255101D0048473D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B1D34302255101D0048473D /* Assets.xcassets */; };
 		5B1D34342255101D0048473D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B1D34322255101D0048473D /* LaunchScreen.storyboard */; };
 		5B1D343F2255101D0048473D /* EthereumSignerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D343E2255101D0048473D /* EthereumSignerTests.swift */; };
 		5B1D344A2255101D0048473D /* EthereumSignerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D34492255101D0048473D /* EthereumSignerUITests.swift */; };
+		5B1D34592255165B0048473D /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D34582255165B0048473D /* UIViewController+Utils.swift */; };
+		5B1D345D225518510048473D /* SetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D345C225518510048473D /* SetupViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* Begin PBXFileReference section */
 		5B1D34262255101B0048473D /* EthereumSigner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EthereumSigner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B1D34292255101B0048473D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5B1D342B2255101B0048473D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5B1D342B2255101B0048473D /* SetupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupVC.swift; sourceTree = "<group>"; };
 		5B1D342E2255101B0048473D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B1D34302255101D0048473D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B1D34332255101D0048473D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		5B1D34452255101D0048473D /* EthereumSignerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EthereumSignerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B1D34492255101D0048473D /* EthereumSignerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthereumSignerUITests.swift; sourceTree = "<group>"; };
 		5B1D344B2255101D0048473D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B1D34582255165B0048473D /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
+		5B1D345C225518510048473D /* SetupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +101,9 @@
 		5B1D34282255101B0048473D /* EthereumSigner */ = {
 			isa = PBXGroup;
 			children = (
+				5B1D345A225518340048473D /* Scenes */,
+				5B1D3457225516450048473D /* Utils */,
 				5B1D34292255101B0048473D /* AppDelegate.swift */,
-				5B1D342B2255101B0048473D /* ViewController.swift */,
 				5B1D342D2255101B0048473D /* Main.storyboard */,
 				5B1D34302255101D0048473D /* Assets.xcassets */,
 				5B1D34322255101D0048473D /* LaunchScreen.storyboard */,
@@ -123,6 +128,31 @@
 				5B1D344B2255101D0048473D /* Info.plist */,
 			);
 			path = EthereumSignerUITests;
+			sourceTree = "<group>";
+		};
+		5B1D3457225516450048473D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5B1D34582255165B0048473D /* UIViewController+Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5B1D345A225518340048473D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				5B1D345B225518410048473D /* Setup */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		5B1D345B225518410048473D /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				5B1D342B2255101B0048473D /* SetupVC.swift */,
+				5B1D345C225518510048473D /* SetupViewModel.swift */,
+			);
+			path = Setup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +286,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B1D342C2255101B0048473D /* ViewController.swift in Sources */,
+				5B1D345D225518510048473D /* SetupViewModel.swift in Sources */,
+				5B1D342C2255101B0048473D /* SetupVC.swift in Sources */,
 				5B1D342A2255101B0048473D /* AppDelegate.swift in Sources */,
+				5B1D34592255165B0048473D /* UIViewController+Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
