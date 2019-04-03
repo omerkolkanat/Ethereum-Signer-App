@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B1D342A2255101B0048473D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D34292255101B0048473D /* AppDelegate.swift */; };
+		5B1D342C2255101B0048473D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D342B2255101B0048473D /* ViewController.swift */; };
+		5B1D342F2255101B0048473D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B1D342D2255101B0048473D /* Main.storyboard */; };
+		5B1D34312255101D0048473D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B1D34302255101D0048473D /* Assets.xcassets */; };
+		5B1D34342255101D0048473D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B1D34322255101D0048473D /* LaunchScreen.storyboard */; };
+		5B1D343F2255101D0048473D /* EthereumSignerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D343E2255101D0048473D /* EthereumSignerTests.swift */; };
+		5B1D344A2255101D0048473D /* EthereumSignerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D34492255101D0048473D /* EthereumSignerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5B1D343B2255101D0048473D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B1D341E2255101B0048473D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B1D34252255101B0048473D;
+			remoteInfo = EthereumSigner;
+		};
+		5B1D34462255101D0048473D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B1D341E2255101B0048473D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B1D34252255101B0048473D;
+			remoteInfo = EthereumSigner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5B1D34262255101B0048473D /* EthereumSigner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EthereumSigner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B1D34292255101B0048473D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5B1D342B2255101B0048473D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5B1D342E2255101B0048473D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5B1D34302255101D0048473D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B1D34332255101D0048473D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5B1D34352255101D0048473D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B1D343A2255101D0048473D /* EthereumSignerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EthereumSignerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B1D343E2255101D0048473D /* EthereumSignerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthereumSignerTests.swift; sourceTree = "<group>"; };
+		5B1D34402255101D0048473D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B1D34452255101D0048473D /* EthereumSignerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EthereumSignerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B1D34492255101D0048473D /* EthereumSignerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthereumSignerUITests.swift; sourceTree = "<group>"; };
+		5B1D344B2255101D0048473D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B1D34232255101B0048473D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B1D34372255101D0048473D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B1D34422255101D0048473D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B1D341D2255101B0048473D = {
+			isa = PBXGroup;
+			children = (
+				5B1D34282255101B0048473D /* EthereumSigner */,
+				5B1D343D2255101D0048473D /* EthereumSignerTests */,
+				5B1D34482255101D0048473D /* EthereumSignerUITests */,
+				5B1D34272255101B0048473D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5B1D34272255101B0048473D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B1D34262255101B0048473D /* EthereumSigner.app */,
+				5B1D343A2255101D0048473D /* EthereumSignerTests.xctest */,
+				5B1D34452255101D0048473D /* EthereumSignerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B1D34282255101B0048473D /* EthereumSigner */ = {
+			isa = PBXGroup;
+			children = (
+				5B1D34292255101B0048473D /* AppDelegate.swift */,
+				5B1D342B2255101B0048473D /* ViewController.swift */,
+				5B1D342D2255101B0048473D /* Main.storyboard */,
+				5B1D34302255101D0048473D /* Assets.xcassets */,
+				5B1D34322255101D0048473D /* LaunchScreen.storyboard */,
+				5B1D34352255101D0048473D /* Info.plist */,
+			);
+			path = EthereumSigner;
+			sourceTree = "<group>";
+		};
+		5B1D343D2255101D0048473D /* EthereumSignerTests */ = {
+			isa = PBXGroup;
+			children = (
+				5B1D343E2255101D0048473D /* EthereumSignerTests.swift */,
+				5B1D34402255101D0048473D /* Info.plist */,
+			);
+			path = EthereumSignerTests;
+			sourceTree = "<group>";
+		};
+		5B1D34482255101D0048473D /* EthereumSignerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5B1D34492255101D0048473D /* EthereumSignerUITests.swift */,
+				5B1D344B2255101D0048473D /* Info.plist */,
+			);
+			path = EthereumSignerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B1D34252255101B0048473D /* EthereumSigner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B1D344E2255101D0048473D /* Build configuration list for PBXNativeTarget "EthereumSigner" */;
+			buildPhases = (
+				5B1D34222255101B0048473D /* Sources */,
+				5B1D34232255101B0048473D /* Frameworks */,
+				5B1D34242255101B0048473D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EthereumSigner;
+			productName = EthereumSigner;
+			productReference = 5B1D34262255101B0048473D /* EthereumSigner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5B1D34392255101D0048473D /* EthereumSignerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B1D34512255101D0048473D /* Build configuration list for PBXNativeTarget "EthereumSignerTests" */;
+			buildPhases = (
+				5B1D34362255101D0048473D /* Sources */,
+				5B1D34372255101D0048473D /* Frameworks */,
+				5B1D34382255101D0048473D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B1D343C2255101D0048473D /* PBXTargetDependency */,
+			);
+			name = EthereumSignerTests;
+			productName = EthereumSignerTests;
+			productReference = 5B1D343A2255101D0048473D /* EthereumSignerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5B1D34442255101D0048473D /* EthereumSignerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B1D34542255101D0048473D /* Build configuration list for PBXNativeTarget "EthereumSignerUITests" */;
+			buildPhases = (
+				5B1D34412255101D0048473D /* Sources */,
+				5B1D34422255101D0048473D /* Frameworks */,
+				5B1D34432255101D0048473D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B1D34472255101D0048473D /* PBXTargetDependency */,
+			);
+			name = EthereumSignerUITests;
+			productName = EthereumSignerUITests;
+			productReference = 5B1D34452255101D0048473D /* EthereumSignerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B1D341E2255101B0048473D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Omer Kolkanat";
+				TargetAttributes = {
+					5B1D34252255101B0048473D = {
+						CreatedOnToolsVersion = 10.2;
+					};
+					5B1D34392255101D0048473D = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 5B1D34252255101B0048473D;
+					};
+					5B1D34442255101D0048473D = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 5B1D34252255101B0048473D;
+					};
+				};
+			};
+			buildConfigurationList = 5B1D34212255101B0048473D /* Build configuration list for PBXProject "EthereumSigner" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5B1D341D2255101B0048473D;
+			productRefGroup = 5B1D34272255101B0048473D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B1D34252255101B0048473D /* EthereumSigner */,
+				5B1D34392255101D0048473D /* EthereumSignerTests */,
+				5B1D34442255101D0048473D /* EthereumSignerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B1D34242255101B0048473D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B1D34342255101D0048473D /* LaunchScreen.storyboard in Resources */,
+				5B1D34312255101D0048473D /* Assets.xcassets in Resources */,
+				5B1D342F2255101B0048473D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B1D34382255101D0048473D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B1D34432255101D0048473D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B1D34222255101B0048473D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B1D342C2255101B0048473D /* ViewController.swift in Sources */,
+				5B1D342A2255101B0048473D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B1D34362255101D0048473D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B1D343F2255101D0048473D /* EthereumSignerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B1D34412255101D0048473D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B1D344A2255101D0048473D /* EthereumSignerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B1D343C2255101D0048473D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B1D34252255101B0048473D /* EthereumSigner */;
+			targetProxy = 5B1D343B2255101D0048473D /* PBXContainerItemProxy */;
+		};
+		5B1D34472255101D0048473D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B1D34252255101B0048473D /* EthereumSigner */;
+			targetProxy = 5B1D34462255101D0048473D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5B1D342D2255101B0048473D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B1D342E2255101B0048473D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5B1D34322255101D0048473D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B1D34332255101D0048473D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5B1D344C2255101D0048473D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5B1D344D2255101D0048473D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5B1D344F2255101D0048473D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RAQF392F68;
+				INFOPLIST_FILE = EthereumSigner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.omerkolkanat.EthereumSigner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5B1D34502255101D0048473D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RAQF392F68;
+				INFOPLIST_FILE = EthereumSigner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.omerkolkanat.EthereumSigner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5B1D34522255101D0048473D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RAQF392F68;
+				INFOPLIST_FILE = EthereumSignerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.omerkolkanat.EthereumSignerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EthereumSigner.app/EthereumSigner";
+			};
+			name = Debug;
+		};
+		5B1D34532255101D0048473D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RAQF392F68;
+				INFOPLIST_FILE = EthereumSignerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.omerkolkanat.EthereumSignerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EthereumSigner.app/EthereumSigner";
+			};
+			name = Release;
+		};
+		5B1D34552255101D0048473D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RAQF392F68;
+				INFOPLIST_FILE = EthereumSignerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.omerkolkanat.EthereumSignerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EthereumSigner;
+			};
+			name = Debug;
+		};
+		5B1D34562255101D0048473D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RAQF392F68;
+				INFOPLIST_FILE = EthereumSignerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.omerkolkanat.EthereumSignerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EthereumSigner;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B1D34212255101B0048473D /* Build configuration list for PBXProject "EthereumSigner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B1D344C2255101D0048473D /* Debug */,
+				5B1D344D2255101D0048473D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B1D344E2255101D0048473D /* Build configuration list for PBXNativeTarget "EthereumSigner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B1D344F2255101D0048473D /* Debug */,
+				5B1D34502255101D0048473D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B1D34512255101D0048473D /* Build configuration list for PBXNativeTarget "EthereumSignerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B1D34522255101D0048473D /* Debug */,
+				5B1D34532255101D0048473D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B1D34542255101D0048473D /* Build configuration list for PBXNativeTarget "EthereumSignerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B1D34552255101D0048473D /* Debug */,
+				5B1D34562255101D0048473D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5B1D341E2255101B0048473D /* Project object */;
+}
