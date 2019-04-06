@@ -10,6 +10,10 @@
 		10DEEADCB8872F8739CA1A1E /* Pods_EthereumSignerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13AA351E88F6F5408ABF81FA /* Pods_EthereumSignerTests.framework */; };
 		2E16A19A58E70D901FD9E3A6 /* Pods_EthereumSignerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96226FFE13B57AD8AB6650A6 /* Pods_EthereumSignerUITests.framework */; };
 		5B1AFC04225667FE00A04CE0 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1AFC03225667FE00A04CE0 /* AccountVC.swift */; };
+		5B1AFC06225678BF00A04CE0 /* SignVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1AFC05225678BF00A04CE0 /* SignVC.swift */; };
+		5B1AFC0A225678F100A04CE0 /* ValidateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1AFC09225678F100A04CE0 /* ValidateVC.swift */; };
+		5B1AFC0C22567B6A00A04CE0 /* SignatureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1AFC0B22567B6A00A04CE0 /* SignatureVC.swift */; };
+		5B1AFC0E22567D8700A04CE0 /* SignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1AFC0D22567D8700A04CE0 /* SignViewModel.swift */; };
 		5B1D342A2255101B0048473D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D34292255101B0048473D /* AppDelegate.swift */; };
 		5B1D342C2255101B0048473D /* SetupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D342B2255101B0048473D /* SetupVC.swift */; };
 		5B1D342F2255101B0048473D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B1D342D2255101B0048473D /* Main.storyboard */; };
@@ -19,6 +23,7 @@
 		5B1D344A2255101D0048473D /* EthereumSignerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D34492255101D0048473D /* EthereumSignerUITests.swift */; };
 		5B1D34592255165B0048473D /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D34582255165B0048473D /* UIViewController+Utils.swift */; };
 		5B1D345D225518510048473D /* SetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D345C225518510048473D /* SetupViewModel.swift */; };
+		5B7C13B12258D9CA003ACC27 /* SignatureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7C13B02258D9CA003ACC27 /* SignatureViewModel.swift */; };
 		E94EB9C4E9B09CEB9788F95C /* Pods_EthereumSigner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E4F2BEEEFD31ED2454B3AEC /* Pods_EthereumSigner.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +49,10 @@
 		14624C71623EA598B3CC766A /* Pods-EthereumSignerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EthereumSignerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EthereumSignerTests/Pods-EthereumSignerTests.release.xcconfig"; sourceTree = "<group>"; };
 		1B7D8C6FA781133C6FC720A8 /* Pods-EthereumSigner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EthereumSigner.release.xcconfig"; path = "Pods/Target Support Files/Pods-EthereumSigner/Pods-EthereumSigner.release.xcconfig"; sourceTree = "<group>"; };
 		5B1AFC03225667FE00A04CE0 /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
+		5B1AFC05225678BF00A04CE0 /* SignVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignVC.swift; sourceTree = "<group>"; };
+		5B1AFC09225678F100A04CE0 /* ValidateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateVC.swift; sourceTree = "<group>"; };
+		5B1AFC0B22567B6A00A04CE0 /* SignatureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureVC.swift; sourceTree = "<group>"; };
+		5B1AFC0D22567D8700A04CE0 /* SignViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewModel.swift; sourceTree = "<group>"; };
 		5B1D34262255101B0048473D /* EthereumSigner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EthereumSigner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B1D34292255101B0048473D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B1D342B2255101B0048473D /* SetupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupVC.swift; sourceTree = "<group>"; };
@@ -59,6 +68,7 @@
 		5B1D344B2255101D0048473D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B1D34582255165B0048473D /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
 		5B1D345C225518510048473D /* SetupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewModel.swift; sourceTree = "<group>"; };
+		5B7C13B02258D9CA003ACC27 /* SignatureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureViewModel.swift; sourceTree = "<group>"; };
 		86DC005BD3FA45C8FDC5BB3F /* Pods-EthereumSignerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EthereumSignerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EthereumSignerTests/Pods-EthereumSignerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8851B8429AB3F132D0B5330E /* Pods-EthereumSigner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EthereumSigner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EthereumSigner/Pods-EthereumSigner.debug.xcconfig"; sourceTree = "<group>"; };
 		8E4F2BEEEFD31ED2454B3AEC /* Pods_EthereumSigner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EthereumSigner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +111,25 @@
 				5B1AFC03225667FE00A04CE0 /* AccountVC.swift */,
 			);
 			path = Account;
+			sourceTree = "<group>";
+		};
+		5B1AFC07225678D100A04CE0 /* Sign */ = {
+			isa = PBXGroup;
+			children = (
+				5B1AFC05225678BF00A04CE0 /* SignVC.swift */,
+				5B1AFC0D22567D8700A04CE0 /* SignViewModel.swift */,
+				5B1AFC0B22567B6A00A04CE0 /* SignatureVC.swift */,
+				5B7C13B02258D9CA003ACC27 /* SignatureViewModel.swift */,
+			);
+			path = Sign;
+			sourceTree = "<group>";
+		};
+		5B1AFC08225678DA00A04CE0 /* Validate */ = {
+			isa = PBXGroup;
+			children = (
+				5B1AFC09225678F100A04CE0 /* ValidateVC.swift */,
+			);
+			path = Validate;
 			sourceTree = "<group>";
 		};
 		5B1D341D2255101B0048473D = {
@@ -170,6 +199,8 @@
 			children = (
 				5B1D345B225518410048473D /* Setup */,
 				5B1AFC02225667DB00A04CE0 /* Account */,
+				5B1AFC07225678D100A04CE0 /* Sign */,
+				5B1AFC08225678DA00A04CE0 /* Validate */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -515,10 +546,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B1AFC04225667FE00A04CE0 /* AccountVC.swift in Sources */,
+				5B1AFC06225678BF00A04CE0 /* SignVC.swift in Sources */,
 				5B1D345D225518510048473D /* SetupViewModel.swift in Sources */,
+				5B7C13B12258D9CA003ACC27 /* SignatureViewModel.swift in Sources */,
 				5B1D342C2255101B0048473D /* SetupVC.swift in Sources */,
+				5B1AFC0A225678F100A04CE0 /* ValidateVC.swift in Sources */,
 				5B1D342A2255101B0048473D /* AppDelegate.swift in Sources */,
 				5B1D34592255165B0048473D /* UIViewController+Utils.swift in Sources */,
+				5B1AFC0E22567D8700A04CE0 /* SignViewModel.swift in Sources */,
+				5B1AFC0C22567B6A00A04CE0 /* SignatureVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

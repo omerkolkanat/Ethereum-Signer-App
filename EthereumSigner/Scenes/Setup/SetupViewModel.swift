@@ -8,7 +8,6 @@
 
 import Foundation
 import Web3swift
-import EthereumAddress
 
 protocol SetupViewModelProtocol: class {
     func didSetup(address: String, balance: String)
@@ -27,7 +26,6 @@ class SetupViewModel: NSObject {
             guard let ethAddress = newWallet.getAddress() else { return }
             guard let balanceResult = try? web3Rinkeby.eth.getBalance(address: ethAddress) else { return }
             guard let balanceString = Web3.Utils.formatToEthereumUnits(balanceResult, toUnits: .eth, decimals: 3) else { return }
-            print(balanceString)
             delegate?.didSetup(address: ethAddress.address, balance: balanceString)
         } else {
             delegate?.didFail()
