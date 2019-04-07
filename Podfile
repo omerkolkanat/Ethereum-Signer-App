@@ -7,6 +7,7 @@ target 'EthereumSigner' do
 
   # Pods for EthereumSigner
   pod 'web3swift'
+  pod 'QRCodeReader.swift'
   target 'EthereumSignerTests' do
     inherit! :search_paths
     # Pods for testing

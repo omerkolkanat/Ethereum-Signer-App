@@ -31,10 +31,14 @@ class SignatureVC: UIViewController {
     func generateQRCode(message: Data) -> UIImage? {
         if let filter = CIFilter(name: "CIQRCodeGenerator") {
             filter.setValue(message, forKey: "inputMessage")
-            let transform = CGAffineTransform(scaleX: 10,y: 10)
-        
-            if let output = filter.outputImage?.transformed(by: transform) {
-                return UIImage(ciImage: output)
+            if let outputCIImage = filter.outputImage {
+                let scaleX = qrCodeImageView.frame.size.width / outputCIImage.extent.width
+                let scaleY = qrCodeImageView.frame.size.height / outputCIImage.extent.height
+                let transform = CGAffineTransform(scaleX: scaleX, y: scaleY)
+            
+                if let output = filter.outputImage?.transformed(by: transform) {
+                    return UIImage(ciImage: output)
+                }
             }
         }
         return nil

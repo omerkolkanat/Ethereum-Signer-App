@@ -25,7 +25,8 @@ class SignatureViewModel: NSObject {
         let ethAddress = keystoreManager.addresses![0]
         do {
             let signedData = try web3Rinkeby.personal.signPersonalMessage(message: message.data(using: .utf8)!, from: ethAddress)
-            delegate?.didSignPersonalMessage(signedData: signedData)
+            let signedBase64Data = signedData.base64EncodedData()
+            delegate?.didSignPersonalMessage(signedData: signedBase64Data)
         } catch {
             print(error)
         }
