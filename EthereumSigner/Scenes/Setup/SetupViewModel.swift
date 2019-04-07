@@ -26,6 +26,7 @@ class SetupViewModel: NSObject {
             guard let ethAddress = newWallet.getAddress() else { return }
             guard let balanceResult = try? web3Rinkeby.eth.getBalance(address: ethAddress) else { return }
             guard let balanceString = Web3.Utils.formatToEthereumUnits(balanceResult, toUnits: .eth, decimals: 3) else { return }
+            Web3Manager.sharedInstance.walletAddress = ethAddress.address
             delegate?.didSetup(address: ethAddress.address, balance: balanceString)
         } else {
             delegate?.didFail()
