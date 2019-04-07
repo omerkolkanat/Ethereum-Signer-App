@@ -11,23 +11,45 @@ import XCTest
 
 class EthereumSignerTests: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testGetBalanceAndAddressWithValidPrivateKey() {
+        Web3Manager.sharedInstance.privateKey = "0x85f2f20a9db5c18a656480a99d4cb1feef5e7eba7c9dff1213fb52aed60881dc"
+        let ethereumWallet = Web3Manager.sharedInstance.getBalanceAndAddress()
+        XCTAssertNotNil(ethereumWallet?.address)
+        XCTAssertNotNil(ethereumWallet?.balance)
+        XCTAssertEqual(ethereumWallet?.address, "0xfC06fE59F38Bb7701833fc2f1c3e2e1D94F858B9")
     }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testGetBalanceAndAdressWithInvalidPrivateKey() {
+        Web3Manager.sharedInstance.privateKey = "0x85f2f20a9db5c18a"
+        let ethereumWallet = Web3Manager.sharedInstance.getBalanceAndAddress()
+        XCTAssertNil(ethereumWallet)
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testSignAndVerifyPersonalMessage() {
+        Web3Manager.sharedInstance.privateKey = "0x85f2f20a9db5c18a656480a99d4cb1feef5e7eba7c9dff1213fb52aed60881dc"
+        if let signedData = Web3Manager.sharedInstance.signPersonalMessage(message: "hello"),
+            let signedString = String(data: signedData, encoding: .utf8) {
+            let validationResult = Web3Manager.sharedInstance.validatePersonalMessage(message: "hello", qrResultString: signedString)
+            XCTAssertTrue(validationResult)
+        }
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testSignAndVerifyPersonalMessageWithDifferentMessage() {
+        Web3Manager.sharedInstance.privateKey = "0x85f2f20a9db5c18a656480a99d4cb1feef5e7eba7c9dff1213fb52aed60881dc"
+        if let signedData = Web3Manager.sharedInstance.signPersonalMessage(message: "hello"),
+            let signedString = String(data: signedData, encoding: .utf8) {
+            let validationResult = Web3Manager.sharedInstance.validatePersonalMessage(message: "hi", qrResultString: signedString)
+            XCTAssertFalse(validationResult)
+        }
+    }
+    
+    func testSignAndVerifyPersonalMessageWithDifferentAddress() {
+        Web3Manager.sharedInstance.privateKey = "0x85f2f20a9db5c18a656480a99d4cb1feef5e7eba7c9dff1213fb52aed60881dc"
+        if let signedData = Web3Manager.sharedInstance.signPersonalMessage(message: "hello"),
+            let signedString = String(data: signedData, encoding: .utf8) {
+            Web3Manager.sharedInstance.walletAddress = "0xfC06fE59F38Bb7701833fc2f1c3e2e1D94F858B8" //last value changed from 9 to 8
+            let validationResult = Web3Manager.sharedInstance.validatePersonalMessage(message: "hello", qrResultString: signedString)
+            XCTAssertFalse(validationResult)
         }
     }
 

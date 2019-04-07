@@ -19,6 +19,7 @@ class SignVC: UIViewController {
     
     func setupUI() {
         title = "Signing"
+        messageTextField.placeholder = "Message"
         hideKeyboardWhenTappedAround()
         messageTextField.delegate = self
 

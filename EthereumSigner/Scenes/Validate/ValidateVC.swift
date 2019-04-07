@@ -28,6 +28,7 @@ class ValidateVC: UIViewController {
         title = "Validate"
         hideKeyboardWhenTappedAround()
         validateTextField.delegate = self
+        validateTextField.placeholder = "Message"
     }
     
     @IBAction func validateButtonTapped(_ sender: Any) {

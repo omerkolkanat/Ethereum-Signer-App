@@ -22,7 +22,9 @@ class AccountVC: UIViewController {
             Web3Manager.sharedInstance.privateKey = privateKey
             if let ethWallet = Web3Manager.sharedInstance.getBalanceAndAddress() {
                 addressValueLabel.text = ethWallet.address
+                addressValueLabel.accessibilityLabel = "address"
                 balanceValueLabel.text = ethWallet.balance
+                balanceValueLabel.accessibilityLabel = "balance"
             }
         }
     }

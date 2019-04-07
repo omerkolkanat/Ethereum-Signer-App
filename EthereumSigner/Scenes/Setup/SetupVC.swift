@@ -10,6 +10,10 @@ import UIKit
 
 class SetupVC: UIViewController {
 
+    enum Const {
+        static let privateKeyLength: Int = 66 // 0x(2) + Private Key Length(64) = 66
+    }
+    
     @IBOutlet weak var privateKeyTextField: UITextField!
     
     override func viewDidLoad() {
@@ -30,9 +34,11 @@ class SetupVC: UIViewController {
     }
     
     func openAccountVC() {
-        guard let privateKey = privateKeyTextField.text, !privateKey.isEmpty else { return }
+        guard let privateKey = privateKeyTextField.text, !privateKey.isEmpty, privateKey.count == Const.privateKeyLength else {
+            AlertHelper.showAlert(title: "Error", message: "Invalid Private Key", fromController: self)
+            return
+        }
         UserDefaults.standard.set(privateKey, forKey: "privateKey")
-        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let accountVC = storyboard.instantiateViewController(withIdentifier: "AccountVC") as? AccountVC {
             let navigationController = UINavigationController(rootViewController: accountVC)

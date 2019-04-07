@@ -26,9 +26,36 @@ class EthereumSignerUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testSetup() {
+        let app = XCUIApplication()
+        let privateKeyTextField = app.textFields["Private Key"]
+        if privateKeyTextField.exists { //Check setup screen passed
+            privateKeyTextField.tap()
+            privateKeyTextField.typeText("0x85f2f20a9db5c18a656480a99d4cb1feef5e7eba7c9dff1213fb52aed60881dc")
+            app.buttons["Done"].tap()
+            sleep(5)
+            XCTAssert(app.staticTexts["address"].exists)
+            XCTAssert(app.staticTexts["balance"].exists)
+        }
     }
-
+    
+    func testSigning() {
+        let app = XCUIApplication()
+        app.buttons["Sign"].tap()
+        let messageTextField = app.textFields["Message"]
+        messageTextField.tap()
+        messageTextField.typeText("hello")
+        app.buttons["Sign Message"].tap()
+        
+        XCTAssert(app.images["QR Code Image View"].exists)
+    }
+    
+    func testValidation() {
+        let app = XCUIApplication()
+        app.buttons["Validate"].tap()
+        let messageTextField = app.textFields["Message"]
+        messageTextField.tap()
+        messageTextField.typeText("hello")
+        app.buttons["Validate Message"].tap()
+    }
 }

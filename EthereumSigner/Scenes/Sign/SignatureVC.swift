@@ -25,5 +25,6 @@ class SignatureVC: UIViewController {
         if let signedData = Web3Manager.sharedInstance.signPersonalMessage(message: message) {
             qrCodeImageView.image = QRCodeGenerator.shared.generateQRCode(message: signedData)
         }
+        qrCodeImageView.accessibilityLabel = "QR Code Image View"
     }
 }
