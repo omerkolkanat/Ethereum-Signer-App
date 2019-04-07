@@ -7,10 +7,8 @@
 //
 
 import UIKit
-import Web3swift
 
 class SignatureVC: UIViewController {
-    fileprivate let model = SignatureViewModel()
     
     var message: String!
     @IBOutlet weak var qrCodeImageView: UIImageView!
@@ -24,29 +22,8 @@ class SignatureVC: UIViewController {
     func setupUI() {
         title = "Signature"
         messageLabel.text = "Message: \(message ?? "")"
-        model.delegate = self
-        model.signPersonalMessage(message: message)
-    }
-    
-    func generateQRCode(message: Data) -> UIImage? {
-        if let filter = CIFilter(name: "CIQRCodeGenerator") {
-            filter.setValue(message, forKey: "inputMessage")
-            if let outputCIImage = filter.outputImage {
-                let scaleX = qrCodeImageView.frame.size.width / outputCIImage.extent.width
-                let scaleY = qrCodeImageView.frame.size.height / outputCIImage.extent.height
-                let transform = CGAffineTransform(scaleX: scaleX, y: scaleY)
-            
-                if let output = filter.outputImage?.transformed(by: transform) {
-                    return UIImage(ciImage: output)
-                }
-            }
+        if let signedData = Web3Manager.sharedInstance.signPersonalMessage(message: message) {
+            qrCodeImageView.image = QRCodeGenerator.shared.generateQRCode(message: signedData)
         }
-        return nil
-    }
-}
-
-extension SignatureVC: SignatureViewModelProtocol {
-    func didSignPersonalMessage(signedData: Data) {
-        qrCodeImageView.image = generateQRCode(message: signedData)
     }
 }

@@ -13,9 +13,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        var storyboard: UIStoryboard?
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        
+        if UserDefaults.standard.string(forKey: "privateKey") != nil {
+            storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let rootController = storyboard!.instantiateViewController(withIdentifier: "AccountVC")
+            let navigationController = UINavigationController(rootViewController: rootController)
+
+            if let window = self.window {
+                window.rootViewController = navigationController
+            }
+        } else {
+            storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let rootController = storyboard!.instantiateViewController(withIdentifier: "SetupVC")
+            let navigationController = UINavigationController(rootViewController: rootController)
+
+            if let window = self.window {
+                window.rootViewController = navigationController
+            }
+        }
         return true
     }
 

@@ -10,7 +10,6 @@ import UIKit
 
 class SignVC: UIViewController {
     
-    fileprivate let model = SignViewModel()
     @IBOutlet weak var messageTextField: UITextField!
     
     override func viewDidLoad() {
@@ -20,26 +19,27 @@ class SignVC: UIViewController {
     
     func setupUI() {
         title = "Signing"
-        model.delegate = self
         hideKeyboardWhenTappedAround()
+        messageTextField.delegate = self
+
     }
     @IBAction func signButtonTapped(_ sender: Any) {
-        model.signMessage(message: messageTextField.text ?? "")
+        openSignatureVC()
     }
     
-}
-
-extension SignVC: SignViewModelProtocol {
-    func didSignMessage() {
+    func openSignatureVC() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let signatureVC = storyboard.instantiateViewController(withIdentifier: "SignatureVC") as? SignatureVC {
             signatureVC.message = messageTextField.text
             self.navigationController?.pushViewController(signatureVC, animated: true)
         }
     }
-    
-    func didFail() {
-        
+}
+
+extension SignVC: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        openSignatureVC()
+        return true
     }
-    
 }

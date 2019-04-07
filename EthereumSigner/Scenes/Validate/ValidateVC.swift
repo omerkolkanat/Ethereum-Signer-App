@@ -9,8 +9,6 @@
 import UIKit
 import QRCodeReader
 import AVFoundation
-import Web3swift
-import secp256k1_swift
 
 class ValidateVC: UIViewController {
     lazy var readerVC: QRCodeReaderViewController = {
@@ -28,18 +26,19 @@ class ValidateVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Validate"
-
+        hideKeyboardWhenTappedAround()
+        validateTextField.delegate = self
     }
     
     @IBAction func validateButtonTapped(_ sender: Any) {
+        presentQRCodeVC()
+    }
+    
+    func presentQRCodeVC() {
         readerVC.delegate = self
         
         readerVC.modalPresentationStyle = .formSheet
         present(readerVC, animated: true, completion: nil)
-    }
-    
-    override var prefersStatusBarHidden: Bool {
-        return true
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -49,21 +48,17 @@ class ValidateVC: UIViewController {
 
 extension ValidateVC: QRCodeReaderViewControllerDelegate {
     func reader(_ reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult) {
-        reader.stopScanning()
-        if let signature = Data(base64Encoded: result.value),
-            let unMarshalledSign = SECP256K1.unmarshalSignature(signatureData: signature) {
-            let web3Rinkeby = Web3.InfuraRinkebyWeb3()
-            print("V = " + String(unMarshalledSign.v))
-            print("R = " + Data(unMarshalledSign.r).toHexString())
-            print("S = " + Data(unMarshalledSign.s).toHexString())
-            let signer = try? web3Rinkeby.personal.ecrecover(personalMessage: validateTextField.text!.data(using: .utf8)!, signature: signature)
-            if (signer?.address == Web3Manager.sharedInstance.walletAddress) {
-                print("Verification succeed")
-            } else {
-                print("Verification failed")
+        
+        guard let message = validateTextField.text else { return }
+        if Web3Manager.sharedInstance.validatePersonalMessage(message: message, qrResultString: result.value) {
+            self.dismiss(animated: true) {
+                AlertHelper.showValidationSuccessMessage(fromController: self)
+            }
+        } else {
+            self.dismiss(animated: true) {
+                AlertHelper.showValidationFailMessage(fromController: self)
             }
         }
-        dismiss(animated: true, completion: nil)
     }
     
     func readerDidCancel(_ reader: QRCodeReaderViewController) {
@@ -73,3 +68,10 @@ extension ValidateVC: QRCodeReaderViewControllerDelegate {
     }
 }
 
+extension ValidateVC: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        presentQRCodeVC()
+        return true
+    }
+}

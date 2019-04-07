@@ -13,15 +13,17 @@ class AccountVC: UIViewController {
     @IBOutlet weak var addressValueLabel: UILabel!
     @IBOutlet weak var balanceValueLabel: UILabel!
     
-    var address: String!
-    var balance: String!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.title = "Account"
-        addressValueLabel.text = address
-        balanceValueLabel.text = balance
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        if let privateKey = UserDefaults.standard.string(forKey: "privateKey") {
+            Web3Manager.sharedInstance.privateKey = privateKey
+            if let ethWallet = Web3Manager.sharedInstance.getBalanceAndAddress() {
+                addressValueLabel.text = ethWallet.address
+                balanceValueLabel.text = ethWallet.balance
+            }
+        }
     }
-
 }
