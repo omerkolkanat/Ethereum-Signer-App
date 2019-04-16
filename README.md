@@ -7,7 +7,7 @@ Also, user can see the account balance and wallet address on the **Rinkeby netwo
 2. Open and run the project
 
 ## Project Structure 
-I used MVVM pattern and I created a manager for signing, validating and getting information such as wallet address and balance. 
+I created a manager for signing, validating and getting information such as wallet address and balance. 
 
 I used CocoaPods to manage third-party library dependencies.
 
